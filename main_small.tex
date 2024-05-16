@@ -1,0 +1,238 @@
+% МАЛЕНЬКИЙ ФОРМАТ. ЕСЛИ РАСПЕЧАТАТЬ С ДВУС СТОРОН, 1ый БИЛЕТ ОКАЖЕТСЯ НАПРОТИВ 2ого, 3ий НАПРОТИВ 4ого И Т.Д.
+
+
+\documentclass[oneside,final,8pt,]{extreport}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{csquotes}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{makecell}  % для переноса строк в таблицах
+\usepackage[backend=biber, style=authortitle]{biblatex}  % для ссылок на литературу
+\addbibresource{references.bib}
+\usepackage{nopageno}
+
+\usepackage{hyperref}  % для ссылок и цвета цитирований
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=magenta,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\setpapersize{A2}  % чтоб буквы были меньше
+\setmarginsrb{1cm}{1cm}{1cm}{1cm}{0pt}{0mm}{0pt}{0mm}
+\usepackage{indentfirst}
+\sloppy
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\setlength{\columnseprule}{1pt}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% \newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\todo}[1]{\colorbox{red}{#1}}
+
+
+\newenvironment{proof}  % док-во теорем
+    {$\blacktriangle$}  % without '$'a does not work
+    {$\blacksquare$}
+    
+\newcommand{\mathLet}{\scalebox{1.}[1.5]{$\sqsupset$}}  % math symbol 'let'
+
+\usepackage{fontawesome}  % to import '\faEye' -- math symbol 'eye'
+% \newcommand{\maeye}{\scalebox{2.}{\faEye}}  % math symbol 'eye', very big
+
+\newcommand*\latseye{%
+       \scalebox{0.25}{\begin{pspicture}(-1,-1)(1,1)
+\rput(1,-.5){\eye}
+\end{pspicture}\kern1em}}
+
+\newcommand*\latdeye{%
+       \reflectbox{\scalebox{0.25}{\begin{pspicture}(-1,-1)(1,1)
+\rput(1,-.5){\eye}
+\end{pspicture}\kern.2em}}}
+
+\everymath{\displaystyle}
+\setlength\parindent{0pt}
+
+% \setlength{\leftmargini}{10pt}  % чтоб отступы в итемайзах были поменьше 
+
+\newlist{itemize2}{enumerate}{1}
+\setlist[itemize2,1]{label = $\bullet$, leftmargin=0em, itemindent = 1.2em}
+
+\renewenvironment{itemize}
+{\begin{itemize2}}
+{\end{itemize2}}
+\begin{document}
+
+% ------------------------- ПРЕЛЮДИЯ -----------------------------
+
+% --- BEGIN OF PAGE ----
+\newpage  
+\begin{tcolorbox}[colback=white, left=0mm, right=0mm]
+\begin{multicols}{4}
+%---------------------0--------------------
+\input{tickets/questions_osn}
+\vfill\null
+\columnbreak
+%---------------------1--------------------
+
+\vfill\null
+\columnbreak
+%---------------------2--------------------
+\input{tickets/titul}
+\vfill\null
+\columnbreak
+%---------------------3--------------------
+
+\vfill\null
+\columnbreak
+%---------------------
+\end{multicols}
+\end{tcolorbox}
+% --- END OF PAGE ----
+
+% -------------------------------------------- OSN -
+\newpage
+% --- BEGIN OF PAGE ----
+\begin{tcolorbox}[colback=white, left=0mm, right=0mm]
+\begin{multicols}{4}
+%---------------------0--------------------
+\input{tickets/t_osn01}
+\vfill\null
+\columnbreak
+%---------------------1--------------------
+\input{tickets/t_osn03}
+\vfill\null
+\columnbreak
+%---------------------2--------------------
+\input{tickets/t_osn05}
+\vfill\null
+\columnbreak
+%---------------------3--------------------
+\input{tickets/t_osn07}
+\vfill\null
+\columnbreak
+%---------------------
+\end{multicols}
+\end{tcolorbox}
+% --- END OF PAGE ----
+
+
+
+% --- BEGIN OF PAGE ----
+\newpage  
+\begin{tcolorbox}[colback=white, left=0mm, right=0mm]
+\begin{multicols}{4}
+%---------------------0--------------------
+\input{tickets/t_osn08}
+\vfill\null
+\columnbreak
+%---------------------1--------------------
+\input{tickets/t_osn06}
+\vfill\null
+\columnbreak
+%---------------------2--------------------
+\input{tickets/t_osn04}
+\vfill\null
+\columnbreak
+%---------------------3--------------------
+\input{tickets/t_osn02}
+\vfill\null
+\columnbreak
+%---------------------
+\end{multicols}
+\end{tcolorbox}
+% --- END OF PAGE ----
+
+
+
+% --- BEGIN OF PAGE ----
+\newpage  
+\begin{tcolorbox}[colback=white, left=0mm, right=0mm]
+\begin{multicols}{4}
+%---------------------0--------------------
+\input{tickets/t_osn09}
+\vfill\null
+\columnbreak
+%---------------------1--------------------
+\input{tickets/t_osn11}
+\vfill\null
+\columnbreak
+%---------------------2--------------------
+\input{tickets/t_osn13}
+\vfill\null
+\columnbreak
+%---------------------3--------------------
+\input{tickets/t_osn15}
+\vfill\null
+\columnbreak
+%---------------------
+\end{multicols}
+\end{tcolorbox}
+% --- END OF PAGE ----
+
+
+% --- BEGIN OF PAGE ----
+\newpage  
+\begin{tcolorbox}[colback=white, left=0mm, right=0mm]
+\begin{multicols}{4}
+%---------------------0--------------------
+\input{tickets/t_osn16}
+\vfill\null
+\columnbreak
+%---------------------1--------------------
+\input{tickets/t_osn14}
+\vfill\null
+\columnbreak
+%---------------------2--------------------
+\input{tickets/t_osn12}
+\vfill\null
+\columnbreak
+%---------------------3--------------------
+\input{tickets/t_osn10}
+\vfill\null
+\columnbreak
+%---------------------
+\end{multicols}
+\end{tcolorbox}
+% --- END OF PAGE ----
+
+
+
+% --- BEGIN OF PAGE ----
+\newpage  
+\begin{tcolorbox}[colback=white, left=0mm, right=0mm]
+\begin{multicols}{4}
+%---------------------0--------------------
+\input{tickets/t_osn17}
+\vfill\null
+\columnbreak
+
+\end{multicols}
+\end{tcolorbox}
+% --- END OF PAGE ----
+
+
+% --- BEGIN OF ADDITIONAL PAGE ----
+\newpage  
+\printbibliography
+% --- END OF ADDITIONAL PAGE ---
+
+
+\end{document}
