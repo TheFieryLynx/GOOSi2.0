@@ -4,3 +4,14 @@ main_big.pdf
 main_small.pdf 
 *.swp
 .texpadtmp
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.tfm
+*.xml
+*.gz
+*.toc
+*larm0*gf
