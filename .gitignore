@@ -2,3 +2,5 @@
 missfont.log
 main_big.pdf
 main_small.pdf 
+*.swp
+.texpadtmp
