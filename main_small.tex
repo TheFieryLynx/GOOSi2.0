@@ -72,12 +72,33 @@
 
 % \setlength{\leftmargini}{10pt}  % чтоб отступы в итемайзах были поменьше 
 
-\newlist{itemize2}{enumerate}{1}
-\setlist[itemize2,1]{label = $\bullet$, leftmargin=0em, itemindent = 1.2em}
+\newlist{myitems}{enumerate}{3}
+
+\setlist[myitems,1]{label = $\bullet$, leftmargin=0em, itemindent = 1.0em}
+\setlist[myitems,2]{label = $-$, leftmargin=1em, itemindent = 1.0em}
+\setlist[myitems,3]{label = $--$, leftmargin=2em, itemindent = 1.0em}
 
 \renewenvironment{itemize}
-{\begin{itemize2}}
-{\end{itemize2}}
+{\begin{myitems}
+\setlength{\itemsep}{0pt}}
+{\end{myitems}}
+
+
+\newlist{myitems2}{enumerate}{3}
+
+\setlist[myitems2,1]{label*=\arabic*.,leftmargin=0.5em, itemindent = 1.0em}
+\setlist[myitems2,2]{label*=\arabic*.,leftmargin=1.5em, itemindent = 1.0em}
+\setlist[myitems2,3]{label*=\arabic*.,leftmargin=2.5em, itemindent = 1.0em}
+
+
+\renewenvironment{enumerate}
+{\begin{myitems2}
+\setlength{\itemsep}{0pt}}
+{\end{myitems2}}
+
+
+
+
 \begin{document}
 
 % ------------------------- ПРЕЛЮДИЯ -----------------------------
@@ -117,15 +138,15 @@
 \vfill\null
 \columnbreak
 %---------------------1--------------------
-\input{tickets/t_osn03}
+\input{tickets/t_osn02}
 \vfill\null
 \columnbreak
 %---------------------2--------------------
-\input{tickets/t_osn05}
+\input{tickets/t_osn03}
 \vfill\null
 \columnbreak
 %---------------------3--------------------
-\input{tickets/t_osn07}
+\input{tickets/t_osn04}
 \vfill\null
 \columnbreak
 %---------------------
@@ -140,7 +161,7 @@
 \begin{tcolorbox}[colback=white, left=0mm, right=0mm]
 \begin{multicols}{4}
 %---------------------0--------------------
-\input{tickets/t_osn08}
+\input{tickets/t_osn05}
 \vfill\null
 \columnbreak
 %---------------------1--------------------
@@ -148,11 +169,11 @@
 \vfill\null
 \columnbreak
 %---------------------2--------------------
-\input{tickets/t_osn04}
+\input{tickets/t_osn07}
 \vfill\null
 \columnbreak
 %---------------------3--------------------
-\input{tickets/t_osn02}
+\input{tickets/t_osn08}
 \vfill\null
 \columnbreak
 %---------------------
@@ -171,15 +192,15 @@
 \vfill\null
 \columnbreak
 %---------------------1--------------------
-\input{tickets/t_osn11}
+\input{tickets/t_osn10}
 \vfill\null
 \columnbreak
 %---------------------2--------------------
-\input{tickets/t_osn13}
+\input{tickets/t_osn11}
 \vfill\null
 \columnbreak
 %---------------------3--------------------
-\input{tickets/t_osn15}
+\input{tickets/t_osn12}
 \vfill\null
 \columnbreak
 %---------------------
@@ -193,7 +214,7 @@
 \begin{tcolorbox}[colback=white, left=0mm, right=0mm]
 \begin{multicols}{4}
 %---------------------0--------------------
-\input{tickets/t_osn16}
+\input{tickets/t_osn13}
 \vfill\null
 \columnbreak
 %---------------------1--------------------
@@ -201,11 +222,11 @@
 \vfill\null
 \columnbreak
 %---------------------2--------------------
-\input{tickets/t_osn12}
+\input{tickets/t_osn15}
 \vfill\null
 \columnbreak
 %---------------------3--------------------
-\input{tickets/t_osn10}
+\input{tickets/t_osn16}
 \vfill\null
 \columnbreak
 %---------------------
@@ -224,14 +245,23 @@
 \vfill\null
 \columnbreak
 
+\vfill\null
+\columnbreak
+
+\vfill\null
+\columnbreak
+
+\vfill\null
+\columnbreak
+
 \end{multicols}
 \end{tcolorbox}
 % --- END OF PAGE ----
 
 
 % --- BEGIN OF ADDITIONAL PAGE ----
-\newpage  
-\printbibliography
+% \newpage  
+% \printbibliography
 % --- END OF ADDITIONAL PAGE ---
 
 
